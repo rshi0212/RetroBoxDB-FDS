@@ -8,9 +8,9 @@ Single-file SQLite preservation database for Nintendo Family Computer Disk Syste
 | --- | --- |
 | Original size | 747 source ZIPs, 33.8 MiB (No-Intro 720, RetroAchievements sets 27); 747 ROM files, 82.7 MiB uncompressed |
 | Stored size | populated database 21.1 MiB; public Catalog 9.5 MiB (no ROM data) |
-| Ratio | 62.4% of the source ZIPs, 25.5% of the uncompressed ROM files |
+| Ratio | 62.5% of the source ZIPs, 25.6% of the uncompressed ROM files |
 | Technology | storage v4: SHA256-deduplicated 64 KiB blocks packed in No-Intro family order into solid LZMA2 groups of up to 128 MiB (128 MiB dictionary); per-block SHA256 and per-object CRC32/MD5/SHA1/SHA256 verification; source ZIPs reproduced byte-for-byte from TorrentZip plans |
-| Export performance | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, Python 3.14.4, all checks included. Whole-set export (747 ROM files in storage order, each group decoded once): 20.0 MiB/s, 6 ms per file on average; single file with a cold cache (the group is decoded up to the file): ROM 0.364 s, TorrentZip 0.334 s on average |
+| Export performance | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, Python 3.14.4, all checks included. whole newest-DAT set with `export_set.py` (405 files, each checked against the DAT hashes): 30.4 MiB/s, 4 ms per file on average; single file with a cold cache (the group is decoded up to the file): ROM 0.364 s, TorrentZip 0.334 s on average |
 
 ## Downloads and documents
 
