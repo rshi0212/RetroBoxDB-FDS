@@ -1,0 +1,46 @@
+{
+  "snapshot_id": 1,
+  "console_id": 81,
+  "fetched_at": "2026-10-05T08:36:47.771599+00:00",
+  "ra_games_with_achievements": 38,
+  "status_totals": {
+    "local": 34,
+    "dat_only": 0,
+    "nointro_db_only": 1,
+    "unmatched": 3
+  },
+  "by_category": {
+    "Official": {
+      "local": 31,
+      "unmatched": 2,
+      "nointro_db_only": 1
+    },
+    "Hack": {
+      "unmatched": 1
+    },
+    "Prototype": {
+      "local": 1
+    },
+    "Unlicensed": {
+      "local": 2
+    }
+  },
+  "local_roms_with_achievements": 47,
+  "rule": "RA hash = MD5 of the complete file; exact hash equality only",
+  "local_games_by_source": {
+    "nointro": 17,
+    "nointro,retroachievements": 17
+  },
+  "retroachievements_collections": {
+    "RA - Nintendo Entertainment System": {
+      "in_nointro_dat": 18,
+      "ra_hash_unknown": 1,
+      "ra_only": 8
+    }
+  },
+  "collection_files_with_unknown_ra_hash": 1,
+  "missing_by_category": {
+    "Hack": 1,
+    "Official": 3
+  }
+}
