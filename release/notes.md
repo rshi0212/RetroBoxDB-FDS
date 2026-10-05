@@ -1,8 +1,9 @@
 FDS Catalog, storage v4 (64 KiB blocks, 1 solid LZMA2 groups of up to 128 MiB). Metadata only: **no ROM payloads are published**; `compression_groups`, `chunks` and `object_chunks` are empty.
 
-- First release: FDS and QD disk images, FDS BIOS variants, FDS/QD DATs, DB Export and Dump Log, RetroAchievements console 81, Chinese names, and the FDS images found in the RetroAchievements NES folder.
-- Source collections (`source_collections`, `v_collection_files`) and RetroAchievements links per file (`v_ra_collection`).
-- Source: 747 ZIPs (nointro 720, retroachievements 27), 33.8 MiB (747 ROM files, 82.7 MiB uncompressed). Populated database: 21.1 MiB (62.5% of the ZIPs). All source ZIPs are reproduced byte-for-byte.
+- The RetroAchievements FDS set is registered as a source collection (53 RA ZIPs in total with the FDS images of the RA NES folder); its FDS images were already stored, and its `.nes` cartridge conversions stay in the NES database.
+- RetroAchievements reports look up sibling databases (NES<->FDS, SNES<->Satellaview): a game whose ROM is stored there is `local_other_platform`, not a gap.
+- Engine: block sizes may be any power of two from 4 KiB to 1 MiB; a parser may store a header in another table (BS-X base cartridge).
+- Source: 773 ZIPs (nointro 720, retroachievements 53), 35.2 MiB (773 ROM files, 85.7 MiB uncompressed). Populated database: 21.7 MiB (61.6% of the ZIPs). All source ZIPs are reproduced byte-for-byte.
 - Contents: 703 ROM records, 307 games, 408 releases; DAT versions: 20260517-061737, 20260617-195332, 20260930-033941.
 - RetroAchievements: 34 of 38 games with achievements have a local ROM.
 - Export (Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, all checks): whole newest-DAT set with export_set.py 30.4 MiB/s (405 files); single file with a cold cache 0.364 s (ROM) / 0.334 s (TorrentZip) on average.

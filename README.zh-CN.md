@@ -6,9 +6,9 @@
 
 | 项目 | 数值 |
 | --- | --- |
-| 原始大小 | 源 ZIP 747 个，33.8 MiB（No-Intro 720 个，RetroAchievements 集合 27 个）；解压后 ROM 747 个，82.7 MiB |
-| 入库后大小 | 完整库 21.1 MiB；公开 Catalog 9.5 MiB（不含 ROM 数据） |
-| 比例 | 完整库为原 ZIP 的 62.5%，为解压后 ROM 总量的 25.6% |
+| 原始大小 | 源 ZIP 773 个，35.2 MiB（No-Intro 720 个，RetroAchievements 集合 53 个）；解压后 ROM 773 个，85.7 MiB |
+| 入库后大小 | 完整库 21.7 MiB；公开 Catalog 10.0 MiB（不含 ROM 数据） |
+| 比例 | 完整库为原 ZIP 的 61.6%，为解压后 ROM 总量的 25.3% |
 | 使用的技术 | 存储 v4：64 KiB 块按 SHA256 去重，按 No-Intro 游戏族顺序装入最大 128 MiB 的 LZMA2 实体组（字典 128 MiB）；逐块 SHA256、逐对象 CRC32／MD5／SHA1／SHA256 校验；源 ZIP 由 TorrentZip 配方逐字节重建 |
 | 导出性能 | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz，空闲负载，Python 3.14.4，含全部校验。按最新 DAT 整套导出（`export_set.py`，405 个文件，逐个按 DAT 哈希校验）：30.4 MiB/s，平均 4 毫秒／个；单个文件冷缓存（每次清空缓存，需解压所在组的前段）：ROM 平均 0.364 秒，TorrentZip 平均 0.334 秒 |
 
@@ -17,7 +17,7 @@
 | 文件／文档 | 内容 |
 | --- | --- |
 | [RetroBoxDB.FDS.Catalog.sqlite](https://github.com/rshi0212/RetroBoxDB-FDS/releases/latest/download/RetroBoxDB.FDS.Catalog.sqlite) | 公开 Catalog（Release 附件，附 `SHA256SUMS`） |
-| [存储 v4 说明](RetroBoxDB.Storage-v4.zh-CN.md)／[English](RetroBoxDB.Storage-v4.en.md) | 七个平台的存储评估、内容、RA、中文名与维护 |
+| [存储 v4 说明](RetroBoxDB.Storage-v4.zh-CN.md)／[English](RetroBoxDB.Storage-v4.en.md) | 八个平台的存储评估、内容、RA、中文名与维护 |
 | [Technical design](RetroBoxDB.Storage-v4.Technical-Design.en.md) | 存储格式、平台适配、增量更新、校验 |
 | [RA 清单](reports/ra-fds-games.csv)／[汇总](reports/ra-fds.json)、[构建报告](reports/fds-build-report.json)、[审计处理](reports/audit-resolution-20261004.md) | 逐项数据 |
 
@@ -29,7 +29,7 @@
 - 全平台按块去重后约 77 MiB，一个 128 MiB 组即可容纳；单组时各种块大小压缩后都约 9.9 MiB，64 KiB 块（每面一块）元数据最少。块在可选的 16 字节 fwNES 头和每面边界处重新起算。
 - 逐面解析磁碟信息块：厂商代码、3 字符游戏代码、游戏类型、修订号、面号与盘号、磁碟类型、BCD 制造日期（年份 50–64 按昭和、50 以下按平成换算，同时保留原始 BCD）、国家代码，以及第 2 块的文件数量。
 - 两种 DAT 格式：FDS DAT 建立游戏与发行版本，QD 条目挂到同名的 FDS 发行版本。DB Export 同时列出两种格式，Dump Log 只有 FDS 格式。
-- RetroAchievements 为 FDS 设有独立主机（ID 81）。RA 的 NES 目录中混有 FDS 磁碟镜像，它们导入本库，不进入 NES 库；RA 哈希在有 fwNES 头时先去掉 16 字节头。
+- RetroAchievements 为 FDS 设有独立主机（ID 81）。FDS 镜像来自 RA 的 FDS 目录，NES 目录中也混有一部分，都导入本库，不进入 NES 库。RA FDS 目录中的 `.nes` 文件（FDS 卡带转换版、盗版卡带）属于 NES，ROM 在 NES 库中的在报告里标为 `local_other_platform`。RA 哈希在有 fwNES 头时先去掉 16 字节头。
 
 ## 内容
 
@@ -38,9 +38,9 @@
 | ROM 记录／游戏组／发行版本 | 703／307／408 |
 | 各版 DAT 覆盖 | 20260517-061737：405/407；20260617-195332：295/296；20260930-033941：294/295 |
 | 不在任何 DAT 的本地 ROM | 9 |
-| RetroAchievements 集合中的 ROM 文件 | DAT 中有 18，仅 RA 收录 8，哈希不在最新 RA 快照 1（[清单](reports/ra-fds-collection-unknown.csv)）；仍缺本地 ROM 的 RA 游戏见 [缺口清单](reports/ra-fds-missing.csv) |
+| RetroAchievements 集合中的 ROM 文件 | DAT 中有 36，仅 RA 收录 16，哈希不在最新 RA 快照 1（[清单](reports/ra-fds-collection-unknown.csv)）；仍缺本地 ROM 的 RA 游戏见 [缺口清单](reports/ra-fds-missing.csv) |
 | No-Intro DB Export＋Dump Log 20260930-033941 | 408 个档案、1,437 个文件身份、8 条有文档的硬件声明；Dump Log Verified 7 |
-| RetroAchievements（console 81） | 有成就的游戏 38 个：本地有 ROM 34（47 个 ROM），仅 DAT 有 0，仅 DB 文件 1，无 No-Intro 对应 3 |
+| RetroAchievements（console 81） | 有成就的游戏 38 个：本地有 ROM 34（47 个 ROM），ROM 在兄弟库中 1，仅 DAT 有 0，仅 DB 文件 1，无 No-Intro 对应 2 |
 | 中文名 | 404 条记录中 404 条有中文（296 个唯一名）；本地 ROM 692 个有中文名 |
 | 完整库审计 | 712 个对象、1 个组、728 个 ZIP 配方，全部通过 |
 

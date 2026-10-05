@@ -6,9 +6,9 @@ Single-file SQLite preservation database for Nintendo Family Computer Disk Syste
 
 | Item | Value |
 | --- | --- |
-| Original size | 747 source ZIPs, 33.8 MiB (No-Intro 720, RetroAchievements sets 27); 747 ROM files, 82.7 MiB uncompressed |
-| Stored size | populated database 21.1 MiB; public Catalog 9.5 MiB (no ROM data) |
-| Ratio | 62.5% of the source ZIPs, 25.6% of the uncompressed ROM files |
+| Original size | 773 source ZIPs, 35.2 MiB (No-Intro 720, RetroAchievements sets 53); 773 ROM files, 85.7 MiB uncompressed |
+| Stored size | populated database 21.7 MiB; public Catalog 10.0 MiB (no ROM data) |
+| Ratio | 61.6% of the source ZIPs, 25.3% of the uncompressed ROM files |
 | Technology | storage v4: SHA256-deduplicated 64 KiB blocks packed in No-Intro family order into solid LZMA2 groups of up to 128 MiB (128 MiB dictionary); per-block SHA256 and per-object CRC32/MD5/SHA1/SHA256 verification; source ZIPs reproduced byte-for-byte from TorrentZip plans |
 | Export performance | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, Python 3.14.4, all checks included. whole newest-DAT set with `export_set.py` (405 files, each checked against the DAT hashes): 30.4 MiB/s, 4 ms per file on average; single file with a cold cache (the group is decoded up to the file): ROM 0.364 s, TorrentZip 0.334 s on average |
 
@@ -17,7 +17,7 @@ Single-file SQLite preservation database for Nintendo Family Computer Disk Syste
 | File / document | Content |
 | --- | --- |
 | [RetroBoxDB.FDS.Catalog.sqlite](https://github.com/rshi0212/RetroBoxDB-FDS/releases/latest/download/RetroBoxDB.FDS.Catalog.sqlite) | Public Catalog (Release asset with `SHA256SUMS`) |
-| [Storage v4 guide](RetroBoxDB.Storage-v4.en.md) / [中文](RetroBoxDB.Storage-v4.zh-CN.md) | Storage evaluation, contents, RA, names and maintenance for all seven platforms |
+| [Storage v4 guide](RetroBoxDB.Storage-v4.en.md) / [中文](RetroBoxDB.Storage-v4.zh-CN.md) | Storage evaluation, contents, RA, names and maintenance for all eight platforms |
 | [Technical design](RetroBoxDB.Storage-v4.Technical-Design.en.md) | Storage format, platform adapters, incremental updates, verification |
 | [RA list](reports/ra-fds-games.csv) / [summary](reports/ra-fds.json), [build report](reports/fds-build-report.json), [audit resolution](reports/audit-resolution-20261004.md) | Detailed data |
 
@@ -29,7 +29,7 @@ Change against 32 MiB groups on real data (whole collection with 64 KiB blocks, 
 - The whole platform is about 77 MiB after block deduplication, so one 128 MiB group holds it; with one group every block size compresses to about 9.9 MiB and 64 KiB blocks (one per side) need the least metadata. Blocks restart at an optional 16-byte fwNES header and at every side.
 - Disk information block of every side: manufacturer code, three-letter game code, game type, revision, side and disk number, disk type, BCD manufacturing date (read as Showa years 50–64 or Heisei years below 50; the raw BCD is kept), country code, and the file amount from block 2.
 - Two DAT formats: the FDS DAT creates games and releases; QD entries join the FDS release of the same name. The DB Export lists both formats; the Dump Log covers FDS images.
-- RetroAchievements lists FDS games under its own console (ID 81). The RA NES folder contains FDS disk images; they are imported here, not into the NES database. RA hashes drop a 16-byte fwNES header when present.
+- RetroAchievements lists FDS games under its own console (ID 81). FDS images come from the RA FDS folder and also from the RA NES folder; both are imported here, not into the NES database. `.nes` files in the RA FDS folder (FDS cartridge conversions, pirate carts) belong to NES and are reported as `local_other_platform` when the NES database holds them. RA hashes drop a 16-byte fwNES header when present.
 
 ## Contents
 
@@ -38,9 +38,9 @@ Change against 32 MiB groups on real data (whole collection with 64 KiB blocks, 
 | ROM records / games / releases | 703 / 307 / 408 |
 | DAT coverage per version | 20260517-061737: 405/407; 20260617-195332: 295/296; 20260930-033941: 294/295 |
 | Local ROMs in no DAT | 9 |
-| ROM files of the RetroAchievements set | in a No-Intro DAT 18, RA only 8, hash not in the latest RA snapshot 1 ([list](reports/ra-fds-collection-unknown.csv)); RA games still without a local ROM: [gap list](reports/ra-fds-missing.csv) |
+| ROM files of the RetroAchievements set | in a No-Intro DAT 36, RA only 16, hash not in the latest RA snapshot 1 ([list](reports/ra-fds-collection-unknown.csv)); RA games still without a local ROM: [gap list](reports/ra-fds-missing.csv) |
 | No-Intro DB Export + Dump Log 20260930-033941 | 408 archives, 1,437 file identities, 8 documented hardware assertions; Dump Log Verified 7 |
-| RetroAchievements (console 81) | 38 games with achievements: 34 with a local ROM (47 ROMs), 0 DAT only, 1 DB file only, 3 without a No-Intro counterpart |
+| RetroAchievements (console 81) | 38 games with achievements: 34 with a local ROM (47 ROMs), 1 with the ROM in a sibling database, 0 DAT only, 1 DB file only, 2 without a No-Intro counterpart |
 | Chinese names | 404 of 404 rows translated (296 unique); 692 local ROMs have a Chinese name |
 | Populated-database audit | 712 objects, 1 groups, 728 archive plans, all passed |
 
