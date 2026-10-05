@@ -1,10 +1,10 @@
 {
-  "tag": "fds-catalog-20261005-3",
-  "title": "Famicom Disk System Catalog: storage v4, FDS and QD formats, RetroAchievements and Chinese names",
+  "tag": "fds-catalog-20261006",
+  "title": "Famicom Disk System Catalog: RetroAchievements FDS set, cross-database links",
   "platform": "fds",
   "catalog_name": "RetroBoxDB.FDS.Catalog.sqlite",
-  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261005-3/RetroBoxDB.FDS.Catalog.sqlite",
-  "base_sha256": "aaaba373449542b6a5387c442832b12fc966b4891be50a77a49632d4f0b5b63e",
+  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261006/RetroBoxDB.FDS.Catalog.sqlite",
+  "base_sha256": "76269510622f1067ddcd24028d59d83d5f495879979078c7dc309eedd8da5586",
   "data_table_sha256": {
     "archive_entries": {
       "rows": 728,
@@ -17,6 +17,10 @@
     "archive_profiles": {
       "rows": 1,
       "sha256": "a8247ca6bd7302d45bbf2e6dfe2fae5b8624f1333cc6a4087cd18bac6e463690"
+    },
+    "bsx_hardware": {
+      "rows": 0,
+      "sha256": "44f335cb2b7c8f195e63c47f303f37dadc7e880771c4b23baef96323d6cb90d3"
     },
     "chunks": {
       "rows": 0,
@@ -43,20 +47,20 @@
       "sha256": "e1b089dd05368f80556542047e523fb1c2b8d7024723dd499b4a7dc71b428efe"
     },
     "events": {
-      "rows": 29,
-      "sha256": "d1a117bc59d8a6d5217ced2ed4a09f02c7e71387bc50879c6d131fbc5499601e"
+      "rows": 38,
+      "sha256": "bc16430e0c61ee86a78921b5403586ada5f44ac1f89dcfa55e8d0bd57d5f3b88"
     },
     "fds_hardware": {
       "rows": 696,
       "sha256": "cf76c6218db4960268069b70fa4bda6b99571f6e558315774b35b59073075b99"
     },
     "file_archives": {
-      "rows": 1447,
-      "sha256": "8f954ad06f6f96f560d1098a18fd0777b4e58f5577619c0b2facd92cf8a2d27c"
+      "rows": 1473,
+      "sha256": "767e4bf93ba7b177934810013d973f5d89fb345ee12aa3da8154516fa81483cd"
     },
     "files": {
-      "rows": 2201,
-      "sha256": "fe68436d045818f832bb854cc6cb789997a2daa4254b59e556b6e0fc5bf0eeb1"
+      "rows": 2253,
+      "sha256": "98b4cdda48816f95f0566c47094f43187ae22023508d8b25746f06057b127749"
     },
     "frontend_fields": {
       "rows": 40,
@@ -123,8 +127,8 @@
       "sha256": "a4453d9151d14fe307fdc4b2e6fc4998abf7887f8dcadc0b2a2e1958a860ded3"
     },
     "naming_decisions": {
-      "rows": 67,
-      "sha256": "6780c30820b8bf8de26ade7cbd3e7224ae81c26fecc9f9ce439e3f8877715845"
+      "rows": 76,
+      "sha256": "d8773aa2a63cff71bf41b9d53f78192031d5146895b0009cf88328caab29f1d3"
     },
     "nes_hardware": {
       "rows": 0,
@@ -211,16 +215,16 @@
       "sha256": "87f0b606d9f7ddbd3c693ad6b37d1bd0a40cc57509369164fd9f7955678a0f69"
     },
     "ra_games": {
-      "rows": 216,
-      "sha256": "05caa76f89e0280758c8bf95416a134db5a6050e1eb38587431a73833daf9b8a"
+      "rows": 432,
+      "sha256": "c92689e0ad6a1aa0579b134e0352651564afc03fd5aafade2f7fb4f0352cebd8"
     },
     "ra_hashes": {
-      "rows": 300,
-      "sha256": "8e53f3b3eeaea1f34f11b0daa3decdc989eb67ca8650ed1cae557726f311199f"
+      "rows": 600,
+      "sha256": "b681b2d8aed5354813852fb9390be1529a4f846240841172f932949c9ecfcd4a"
     },
     "ra_snapshots": {
-      "rows": 1,
-      "sha256": "8aab7324c7b3d67d4a907bcd7afb95f7458327a35da78b82ec75a2c34ad8328e"
+      "rows": 2,
+      "sha256": "d6847517293e5f0b284621186c49e4e83c270b6a11029308d21b9af50e562ef6"
     },
     "release_dat_games": {
       "rows": 1812,
@@ -275,8 +279,8 @@
       "sha256": "cead57e1388fcc6cda606e5fa31e942a8343cf688f9501ae97d0bc10a4a4b519"
     },
     "source_collections": {
-      "rows": 4,
-      "sha256": "a7e09ef4610d1fa841d57fd9da006663381263bdaf8b3d4898e58354219c93ea"
+      "rows": 5,
+      "sha256": "7f096c6aeb2fa911251c91f84ce72a7aca0700522df8ba72768020a34d843e00"
     },
     "sources": {
       "rows": 1551,
@@ -288,7 +292,7 @@
     },
     "validations": {
       "rows": 1807,
-      "sha256": "ca6c4df82d5912d55c2b89c7e12e3556bd7779c735d22b03669624461f7978c4"
+      "sha256": "644f84c2b31120d01d880d3c8d6c7869bff14a362248b9230185123d88ee1600"
     }
   },
   "resources": {
@@ -383,6 +387,10 @@
     "storage-experiment-fds": {
       "kind": "json",
       "path": "assessment/data/storage-experiment-fds.json"
+    },
+    "storage-experiment-satellaview": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-satellaview.json"
     },
     "storage-curves": {
       "kind": "json",
