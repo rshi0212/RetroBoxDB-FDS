@@ -1,10 +1,10 @@
 {
-  "tag": "fds-catalog-20261005-2",
+  "tag": "fds-catalog-20261005-3",
   "title": "Famicom Disk System Catalog: storage v4, FDS and QD formats, RetroAchievements and Chinese names",
   "platform": "fds",
   "catalog_name": "RetroBoxDB.FDS.Catalog.sqlite",
-  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261005-2/RetroBoxDB.FDS.Catalog.sqlite",
-  "base_sha256": "bac1e2979825fb91676e66bbceb86ea61ff45447efa4b2c9d98b8dde8b8e38e2",
+  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261005-3/RetroBoxDB.FDS.Catalog.sqlite",
+  "base_sha256": "aaaba373449542b6a5387c442832b12fc966b4891be50a77a49632d4f0b5b63e",
   "data_table_sha256": {
     "archive_entries": {
       "rows": 728,
@@ -43,8 +43,8 @@
       "sha256": "e1b089dd05368f80556542047e523fb1c2b8d7024723dd499b4a7dc71b428efe"
     },
     "events": {
-      "rows": 27,
-      "sha256": "fab3e5e2877d13ded5b5b4010b7f845e6fe3f43cd2a731d5052ce7e9ae5a3c4d"
+      "rows": 29,
+      "sha256": "d1a117bc59d8a6d5217ced2ed4a09f02c7e71387bc50879c6d131fbc5499601e"
     },
     "fds_hardware": {
       "rows": 696,
