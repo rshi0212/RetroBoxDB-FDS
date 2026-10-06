@@ -1,10 +1,10 @@
 {
-  "tag": "fds-catalog-20261006",
-  "title": "Famicom Disk System Catalog: RetroAchievements FDS set, cross-database links",
+  "tag": "fds-catalog-20261006-2",
+  "title": "Famicom Disk System Catalog: naming normalized, one schema for fifteen platforms",
   "platform": "fds",
   "catalog_name": "RetroBoxDB.FDS.Catalog.sqlite",
-  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261006/RetroBoxDB.FDS.Catalog.sqlite",
-  "base_sha256": "76269510622f1067ddcd24028d59d83d5f495879979078c7dc309eedd8da5586",
+  "base_url": "https://github.com/rshi0212/RetroBoxDB-FDS/releases/download/fds-catalog-base-20261006-2/RetroBoxDB.FDS.Catalog.sqlite",
+  "base_sha256": "a293a87ea5f915bc055fbb28cf14fbd57d76b5e59475dca68f19e46f70c17b46",
   "data_table_sha256": {
     "archive_entries": {
       "rows": 728,
@@ -47,8 +47,8 @@
       "sha256": "e1b089dd05368f80556542047e523fb1c2b8d7024723dd499b4a7dc71b428efe"
     },
     "events": {
-      "rows": 38,
-      "sha256": "bc16430e0c61ee86a78921b5403586ada5f44ac1f89dcfa55e8d0bd57d5f3b88"
+      "rows": 45,
+      "sha256": "c66fb70d35e55b256fcd7a47962e53671e49c4e15b506039f85966eb9a904a92"
     },
     "fds_hardware": {
       "rows": 696,
@@ -76,7 +76,7 @@
     },
     "frontend_platforms": {
       "rows": 1,
-      "sha256": "c39abbd482b59009d72940a395958621cafb135b4952b2b9ffa822325bb383d8"
+      "sha256": "5eb43005caf4d4335990a1c58cae47ee4c1d6fab8e9d0b5767c84a144d482ca6"
     },
     "frontend_profiles": {
       "rows": 1,
@@ -124,7 +124,7 @@
     },
     "meta": {
       "rows": 23,
-      "sha256": "a4453d9151d14fe307fdc4b2e6fc4998abf7887f8dcadc0b2a2e1958a860ded3"
+      "sha256": "1742693a4baf2865d2afece687cdab6dbbb7d59122b965f33748db3a343e08ae"
     },
     "naming_decisions": {
       "rows": 76,
@@ -137,6 +137,10 @@
     "nes_recipes": {
       "rows": 0,
       "sha256": "751f5c09cc9ab01187b10f062c562a74eb320de058ba0821aebeb47306dfd8b3"
+    },
+    "ngp_hardware": {
+      "rows": 0,
+      "sha256": "9a2f5d3a596e1c1fc3eb468f4970cd438db9a5aabcb1085e88ef2cee1e263799"
     },
     "ni_anomalies": {
       "rows": 1061,
@@ -214,6 +218,30 @@
       "rows": 1,
       "sha256": "87f0b606d9f7ddbd3c693ad6b37d1bd0a40cc57509369164fd9f7955678a0f69"
     },
+    "pokemini_hardware": {
+      "rows": 0,
+      "sha256": "dc96eb03b53617ff828d26e3915af95a36468cc5ec5eea4bf01fbdf0ee429631"
+    },
+    "provider_record_media": {
+      "rows": 0,
+      "sha256": "3ec0c10f07801ba685db1093a142faff421ff51fe34f3af611d9848e89129c7f"
+    },
+    "provider_record_values": {
+      "rows": 0,
+      "sha256": "06d4460adf562dd478efbb2953eba00e81eed2639ca38a4d272afb58dbc3cf49"
+    },
+    "provider_records": {
+      "rows": 0,
+      "sha256": "8d1aed94767a621a19255f9831ccd32422401538e907aa60255b17471f53a041"
+    },
+    "provider_snapshot_records": {
+      "rows": 0,
+      "sha256": "59f3c85810597549f150b6d04a899a44545a2b4fe6006a5a57134d827bafcbb9"
+    },
+    "provider_snapshots": {
+      "rows": 0,
+      "sha256": "f35a831d676242731ee6a3638ae1227bf32b28367205a13ce2f610e6c3df068d"
+    },
     "ra_games": {
       "rows": 432,
       "sha256": "c92689e0ad6a1aa0579b134e0352651564afc03fd5aafade2f7fb4f0352cebd8"
@@ -258,17 +286,33 @@
       "rows": 703,
       "sha256": "799713e361c8ff8f6fa45c64193aa1af251d710d2970571cf04397a0523f9469"
     },
+    "scrape_blobs": {
+      "rows": 0,
+      "sha256": "d69e8bc381417dc1569bb2547217128153f7c64a25c8af024bc824e313eeb304"
+    },
+    "scrape_checks": {
+      "rows": 0,
+      "sha256": "70ca06aa5ee90c1437372a352754bd6c73b417eab499ace5ca3c822c21efaf54"
+    },
     "scrape_records": {
       "rows": 0,
       "sha256": "ee22a6bc78d4f6cf94e515608899aff607cefe667196adc091ee83b5d293291f"
+    },
+    "scrape_texts": {
+      "rows": 0,
+      "sha256": "8f10df29cf80783a2d113e0854c92db8f9c15f7d7bea55224166ad98637bd05a"
     },
     "scraper_game_links": {
       "rows": 0,
       "sha256": "22e0a1fcf583b574e9b3861b7b651ee25c4500fcc7b118f6dd41ca0ba4f6bc11"
     },
     "scraper_providers": {
-      "rows": 1,
-      "sha256": "ad358de51eea41e843cd0757449d5bc7ed51b790e76768b9651051451c16bf86"
+      "rows": 2,
+      "sha256": "82920b2b40de7fc602f4f14769e0dd2384f435705a9be8cd4ed08a984c72d37f"
+    },
+    "sms_hardware": {
+      "rows": 0,
+      "sha256": "0f28796bb95b44ff2c416e9d7c1d66f03d8620c25689e7e5d2ddd2366bf07d39"
     },
     "snes_hardware": {
       "rows": 0,
@@ -286,6 +330,14 @@
       "rows": 1551,
       "sha256": "ceaa6dd353ec932366f1f576920484c3af6cdfcb960ffc5a795e5484c5c7ea59"
     },
+    "ss_lookups": {
+      "rows": 0,
+      "sha256": "1f3830951443b3ba835c0df68f8109720625b72e05268052759cda8173ef9e53"
+    },
+    "ss_record_roms": {
+      "rows": 0,
+      "sha256": "cd4bcd17af6f21b58cd49fb15a5ff13a976b99e9c5d53acea9ec135bcbf761cc"
+    },
     "transformations": {
       "rows": 0,
       "sha256": "d34d00b4de69a479200769531bc6d17502d5047117c15922c0616e01a1cbc24a"
@@ -293,6 +345,10 @@
     "validations": {
       "rows": 1807,
       "sha256": "644f84c2b31120d01d880d3c8d6c7869bff14a362248b9230185123d88ee1600"
+    },
+    "ws_hardware": {
+      "rows": 0,
+      "sha256": "db3b69505e80a7a046eb7fae0f6d4ba62fa9a50462e32bc8885593fccdf1844d"
     }
   },
   "resources": {
@@ -360,6 +416,10 @@
       "kind": "python",
       "path": "tools/export_nointro_parents.py"
     },
+    "normalize_db.py": {
+      "kind": "python",
+      "path": "tools/normalize_db.py"
+    },
     "tests_v4.py": {
       "kind": "python",
       "path": "tests/test_v4.py"
@@ -391,6 +451,34 @@
     "storage-experiment-satellaview": {
       "kind": "json",
       "path": "assessment/data/storage-experiment-satellaview.json"
+    },
+    "storage-experiment-mastersystem": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-mastersystem.json"
+    },
+    "storage-experiment-sega32x": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-sega32x.json"
+    },
+    "storage-experiment-wswan": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-wswan.json"
+    },
+    "storage-experiment-wswanc": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-wswanc.json"
+    },
+    "storage-experiment-ngp": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-ngp.json"
+    },
+    "storage-experiment-ngpc": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-ngpc.json"
+    },
+    "storage-experiment-pokemini": {
+      "kind": "json",
+      "path": "assessment/data/storage-experiment-pokemini.json"
     },
     "storage-curves": {
       "kind": "json",
