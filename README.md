@@ -7,8 +7,8 @@ Single-file SQLite preservation database for Nintendo Family Computer Disk Syste
 | Item | Value |
 | --- | --- |
 | Original size | 773 source ZIPs, 35.2 MiB (No-Intro 720, RetroAchievements sets 53); 773 ROM files, 85.7 MiB uncompressed |
-| Stored size | populated database 21.7 MiB; public Catalog 10.0 MiB (no ROM data) |
-| Ratio | 61.6% of the source ZIPs, 25.3% of the uncompressed ROM files |
+| Stored size | populated database 21.9 MiB; public Catalog 10.2 MiB (no ROM data) |
+| Ratio | 62.2% of the source ZIPs, 25.5% of the uncompressed ROM files |
 | Technology | storage v4: SHA256-deduplicated 64 KiB blocks packed in No-Intro family order into solid LZMA2 groups of up to 128 MiB (128 MiB dictionary); per-block SHA256 and per-object CRC32/MD5/SHA1/SHA256 verification; source ZIPs reproduced byte-for-byte from TorrentZip plans |
 | Export performance | Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz, idle, Python 3.14.4, all checks included. whole newest-DAT set with `export_set.py` (405 files, each checked against the DAT hashes): 30.4 MiB/s, 4 ms per file on average; single file with a cold cache (the group is decoded up to the file): ROM 0.364 s, TorrentZip 0.334 s on average |
 
@@ -17,7 +17,7 @@ Single-file SQLite preservation database for Nintendo Family Computer Disk Syste
 | File / document | Content |
 | --- | --- |
 | [RetroBoxDB.FDS.Catalog.sqlite](https://github.com/rshi0212/RetroBoxDB-FDS/releases/latest/download/RetroBoxDB.FDS.Catalog.sqlite) | Public Catalog (Release asset with `SHA256SUMS`) |
-| [Storage v4 guide](RetroBoxDB.Storage-v4.en.md) / [中文](RetroBoxDB.Storage-v4.zh-CN.md) | Storage evaluation, contents, RA, names and maintenance for all eight platforms |
+| [Storage v4 guide](RetroBoxDB.Storage-v4.en.md) / [中文](RetroBoxDB.Storage-v4.zh-CN.md) | Storage evaluation, contents, RA, names and maintenance for every platform |
 | [Technical design](RetroBoxDB.Storage-v4.Technical-Design.en.md) | Storage format, platform adapters, incremental updates, verification |
 | [RA list](reports/ra-fds-games.csv) / [summary](reports/ra-fds.json), [build report](reports/fds-build-report.json), [audit resolution](reports/audit-resolution-20261004.md) | Detailed data |
 
